@@ -1,122 +1,69 @@
-\# Diary Entry Application
+# Diary Entry Application
 
+A Python command-line application for creating, saving, and viewing dated diary entries.
 
+## Features
 
-A Python command-line application for creating, saving, and viewing
+- Select a diary text file by name or path.
+- Create dated diary entries.
+- Save each entry on a separate line.
+- Display all entries in the selected diary.
+- Filter and print entries by date.
+- Load a different diary file during the session.
+- Validate dates, menu choices, and empty entries.
 
-dated diary entries.
+## Requirements
 
+- Python 3
+- No third-party packages are required.
 
+## Run the Application
 
-\## Features
+1. Download and extract the repository.
+2. Open a terminal in the folder containing `main.py` and `diary.py`.
+3. Run:
 
+   ```bash
+   python main.py
+   ```
 
+   On Windows, you can also use:
 
-\- Select a diary text file by name or path.
+   ```bash
+   py main.py
+   ```
 
-\- Create dated diary entries.
+4. Follow the prompts to select a diary file and use the menu.
 
-\- Save each entry on a separate line.
+## Menu
 
-\- Display all entries in the selected diary.
+1. Create a diary entry.
+2. View all diary entries.
+3. Find diary entries by date.
+4. Load a different diary file.
+5. Exit.
 
-\- Filter and print entries by date.
+Enter dates in `YYYY-MM-DD` format, such as `2026-10-16`.
 
-\- Load a different diary file during the session.
+## Project Files
 
-\- Validate dates, menu choices, and empty entries.
+| File | Purpose |
+| --- | --- |
+| `main.py` | Application entry point and user interaction. |
+| `diary.py` | Data validation, file handling, and entry filtering. |
+| `diary.txt` | Sample diary file containing entries. |
+| `second_diary.txt` | Additional diary file for testing file switching. |
+| `Output 1.png`–`Output 5.png` | Screenshots demonstrating application output. |
 
+## Diary File Format
 
-
-\## Requirements
-
-
-
-\- Python 3
-
-\- No third-party packages are required.
-
-
-
-\## Run the application
-
-
-
-Open a terminal in the project folder and run:
-
-
-
-```bash
-
-python main.py
-
-```
-
-
-
-On Windows, you can also use:
-
-
-
-```bash
-
-py main.py
-
-```
-
-
-
-\## Menu
-
-
-
-1\. Create a diary entry
-
-2\. View all diary entries
-
-3\. Find diary entries by date
-
-4\. Load a different diary file
-
-5\. Exit
-
-
-
-\## File structure
-
-
-
-\- `main.py`: Application entry point and user interaction.
-
-\- `diary.py`: Date validation, file handling, and entry filtering.
-
-
-
-\## Diary file format
-
-
-
-Diary files use the `.txt` extension. Each line contains one JSON
-
-object with the entry's date and text.
-
-
+Diary files use the `.txt` extension. Each line contains one JSON object with the entry's date and text.
 
 Example:
 
-
-
-```text
-
+```json
 {"date": "2026-10-05", "text": "Today I worked on my Python assignment."}
-
 {"date": "2026-10-06", "text": "I tested loading another diary file."}
-
 ```
 
-
-
-Selecting an existing diary file preserves its entries.
-
-Selecting a new file creates an empty diary.
-
+Selecting an existing diary file preserves its entries. Selecting a new filename creates an empty diary.
